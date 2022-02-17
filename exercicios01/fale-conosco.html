@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+</head>
+<script language="javascript" src="_javascript/funcoes.js"></script>
+<script>
+    function totalPagar() {
+        let qtd = parseInt(document.getElementById('iQnt').value);
+        total = qtd*1500;
+        document.getElementById('iPrc').value = total;
+    }
+</script>
+<body>
+<div id="interface">
+<header id="cabecalho">
+<hgroup>
+    <h1>Google Glass</h1>
+    <h2>A revolução do Google está chegando</h2>
+</hgroup>
+<img id="icone" src="_imagens/contato.png"/>
+<nav id="menu">
+<h1>Menu Principal</h1>
+<ul type="">
+    <li onmouseover="mudaFoto('home.png')" onmouseout="mudaFoto('contato.png')"><a href="index.html">Home</a></li>
+    <li onmouseover="mudaFoto('especificacoes.png')" onmouseout="mudaFoto('contato.png')"><a href="specs.html">Especificações</a></li>
+    <li onmouseover="mudaFoto('fotos.png')" onmouseout="mudaFoto('contato.png')"><a href="fotos.html">Fotos</li>
+    <li onmouseover="mudaFoto('multimidia.png')" onmouseout="mudaFoto('contato.png')"><a href="multimidia.html">Multimídia</a></li>
+    <li onmouseover="mudaFoto('contato.png')" onmouseout="mudaFoto('contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+</ul>
+</nav>
+</header>
+<section id="corpo-full">
+<article id="principal">
+<header id="artc-head">
+<hgroup>
+    <h3>Fale Conosco > Contato</h3>
+    <h1>Formulário de Contato</h1>
+    <h2>por Lincolnn Palhares</h2>
+    <h3 class="date">Atualizado em 01/Maio/2013</h3>
+</hgroup>
+</header>
+<form method="post" id="iContato" action="mailto:ohlinky9@gmail.com" oninput="totalPagar();">
+<fieldset id="user">
+<legend>Identificação do Usuário</legend>
+    <p><label for="iNome">Nome: </label><input type="text" name="nNome" id="iNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
+    <p><label for="iSenha">Senha: </label><input type="password" name="nSenha" id="iSenha" size="20" maxlength="15" placeholder="Senha de 10 digitos"/></p>
+    <p><label for="iEmail">E-mail: </label><input type="email" name="nEmail" id="iEmail" size="20" maxlength="50" placeholder="Seu e-mail"/></p>
+    <fieldset id="sex"><legend>Sexo:</legend>
+        <input type="radio" name="nSex" id="iMale"/> <label for="iMale">Masculino</label><br>
+        <input type="radio" name="nSex" id="iFem"/> <label for="iFem">Feminino</label>
+    </fieldset>
+    <p><label for="iData">Data de Nascimento: </label><input type="date" name="nData" id="iData"/></p>
+</fieldset>
+<fieldset id="street">
+<legend>Endereço do Usuário</legend>
+    <p><label for="iRua">Logradouro: </label><input name="nRua" id="iRua" size="50" maxlength="100" placeholder="Rua, Avenida, etc"/></p>
+    <p><label for="iNum">Número: </label><input type="number" name="nNum" id="iNum" min="0" max="99999" placeholder="Número"/></p>
+    <p><label for="iEstado">Estado: </label><select name="nEstado" id="iEstado">
+        <option value="AC">Acre</option>
+	    <option value="AL">Alagoas</option>
+	    <option value="AP">Amapá</option>
+	    <option value="AM">Amazonas</option>
+	    <option value="BA">Bahia</option>
+	    <option value="CE">Ceará</option>
+	    <option value="DF">Distrito Federal</option>
+	    <option value="ES">Espírito Santo</option>
+	    <option value="GO">Goiás</option>
+	    <option value="MA">Maranhão</option>
+	    <option value="MT">Mato Grosso</option>
+	    <option value="MS">Mato Grosso do Sul</option>
+	    <option value="MG">Minas Gerais</option>
+	    <option value="PA">Pará</option>
+	    <option value="PB">Paraíba</option>
+	    <option value="PR">Paraná</option>
+	    <option value="PE">Pernambuco</option>
+	    <option value="PI">Piauí</option>
+	    <option value="RJ">Rio de Janeiro</option>
+	    <option value="RN">Rio Grande do Norte</option>
+	    <option value="RS">Rio Grande do Sul</option>
+	    <option value="RO">Rondônia</option>
+	    <option value="RR">Roraima</option>
+	    <option value="SC" selected>Santa Catarina</option>
+	    <option value="SP">São Paulo</option>
+	    <option value="SE">Sergipe</option>
+	    <option value="TO">Tocantins</option>
+    </select></p>
+    <p><label for="iCidade">Cidade: </label><input type="text" name="nCidade" id="iCidade" maxlength="30" placeholder="Sua cidade"/>
+    <datalist id="cidades"></datalist></p>
+</fieldset>
+<fieldset id="message">
+<legend>Mensagem do Usuário</legend>
+    <p><label for="iUrg">Grau de Urgência: Min <input type="range" name="nUrg" id="iUrg" min="0" max="10" step="5"/> Max</label></p>
+    <P><label for="iMsg">Mensagem: </label><textarea name="nMsg" id="iMsg" cols="35" rows="5" placeholder="Deixe sua mensagem"></textarea></P>
+</fieldset>
+<fieldset id="order">
+<legend>Quero um Google Glass</legend>
+    <p><input type="checkbox" name="nPed" id="iPed" checked/><label for="iPed">Gostaria de adquirir um Google Glass quando disponível </label></p>
+    <p><label for="iCor">Cor: </label><input type="color" name="nCor" id="iCor" value="black"/></p>
+    <p><label for="iQnt">Quantidade: </label><input type="number" name="nQnt" id="iQnt" min="0" max="100" value="0"/></p>
+    <p><label for="iPrc">Preço Total: R$ </label><input type="text" name="nPrc" id="iPrc" placeholder="Total a pagar" readonly/></p>
+</fieldset>
+<input type="image" name="nEnviar" src="_imagens/botao-enviar.png"/>
+</form>
+<footer id="rodape">
+<p>Copyright &copy; 2022 - by Lincolnn Palhares <br/>
+<a href="http://facebook.com/lincolnn.palhares" target="_blank">Facebook</a> | <a href="http://twitter/lincxlnn" target="_blank">Twitter</a></p>
+</footer>
+</div>
+</body>
+</html>
