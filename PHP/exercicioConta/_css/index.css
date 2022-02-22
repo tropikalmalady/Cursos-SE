@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.button {
+    margin: 20px;
+    font-size: 14pt;
+    border: 0;
+    text-decoration: none;
+    border-radius: 100px;
+    padding: 5px 10px 5px 10px;
+    box-shadow: 0px 0px 4px gray;
+    color: black;
+}
+form {
+    display: block;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 600px;
+    font-size: 16pt;
+    font-family: sans-serif;
+}
+fieldset {
+    display: block;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 400px;
+    font-size: 16pt;
+    font-family: sans-serif;
+}
+legend {
+    font-size: 18pt;
+    color: blueviolet;
+    margin-bottom: 10px;
+}
