@@ -1,0 +1,4 @@
+USE treinamento
+
+ALTER TABLE SUPPLIER
+ADD dsstatus VARCHAR(10)

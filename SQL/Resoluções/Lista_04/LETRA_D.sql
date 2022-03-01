@@ -1,0 +1,13 @@
+USE treinamento
+
+SELECT C.NMCUSTOMER AS 'Nome cliente',
+C.IDFONE AS 'Telefone',
+MAX(R.VLTOTAL) AS 'Maior compra',
+MIN(R.VLTOTAL) AS 'Menor compra',
+SUM(R.VLTOTAL) AS 'Total comprado',
+AVG(R.VLTOTAL) AS 'Média de compras'
+FROM CUSTOMER AS C
+INNER JOIN REQUEST AS R
+ON C.CDCUSTOMER=R.CDCUSTOMER
+GROUP BY C.NMCUSTOMER, C.IDFONE
+ORDER BY 'Maior compra' DESC
